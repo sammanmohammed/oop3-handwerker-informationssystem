@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="20.0"
+    xmlns="http://javafx.com/javafx/11.0.1"
+    xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="de.handwerkersystem.dlg.auftragverwalter.KundenauftragScreenController">
+
+    <children>
+        <Label text="Kundenaufträge verwalten">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+
+        <Button text="Auftrag Anlegen"
+            prefHeight="35.0" prefWidth="200.0"
+            onAction="#bt_auftraganlegenClicked" />
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="200.0"
+            text="Auftragsbearbeitung" onAction="#bt_auftragsbearbeitungClicked" />
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="200.0"
+            text="Abrechnung verwalten" onAction="#bt_abrechnungClicked" />
+
+        <Button text="Zurück zum Hauptmenü"
+            prefHeight="35.0" prefWidth="200.0"
+            onAction="#bt_zurueckClicked" />
+    </children>
+
+    <padding>
+        <Insets top="20.0" right="20.0" bottom="20.0" left="20.0" />
+    </padding>
+</VBox>

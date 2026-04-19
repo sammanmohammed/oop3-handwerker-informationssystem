@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns="http://javafx.com/javafx/23.0.1"
+    xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="de.handwerkersystem.dlg.ressourceverwalter.RessourcenAendernScreenController"
+    prefHeight="500.0" prefWidth="700.0"
+    alignment="TOP_CENTER" spacing="20.0">
+
+
+    <children>
+
+
+        <Label text="Ressourcendaten Ändern">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+
+
+        <TableView fx:id="tv_ressource" prefHeight="200.0" prefWidth="350.0">
+            <columns>
+                <TableColumn fx:id="tc_id" prefWidth="100.0" text="ID" />
+                <TableColumn fx:id="tc_art" prefWidth=".100" text="Art" />
+                <TableColumn fx:id="tc_name" prefWidth="100.0" text="Name" />
+                <TableColumn fx:id="tc_standrdkostensatz" prefWidth="50.0" text="Standrdkostensatz" />
+            </columns>
+        </TableView>
+
+
+        <GridPane hgap="10.0" vgap="10.0">
+            <padding>
+
+                <Insets top="20.0" left="50.0" right="0.0" bottom="0.0" />
+            </padding>
+
+            <children>
+
+
+                <Label text="Art:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+                <TextField fx:id="tf_art" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+
+                <Label text="Name:" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+                <TextField fx:id="tf_name" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+                <Label text="StandrdKostensatz:" GridPane.rowIndex="3" GridPane.columnIndex="0" />
+                <TextField fx:id="tf_standrdkostensatz" GridPane.rowIndex="3"
+                    GridPane.columnIndex="1" />
+
+
+            </children>
+        </GridPane>
+
+
+        <HBox alignment="CENTER" spacing="10.0">
+            <children>
+                <Button fx:id="bt_zurueck" text="Zurück"
+                    onAction="#bt_zurueckClicked" />
+                <Button fx:id="bt_speichern" text="Änderungen speichern"
+                    onAction="#bt_aenderungspeichernClicked" />
+
+            </children>
+        </HBox>
+
+    </children>
+</VBox>

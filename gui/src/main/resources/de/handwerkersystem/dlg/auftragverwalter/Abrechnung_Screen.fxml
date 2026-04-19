@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns="http://javafx.com/javafx/11.0.1"
+    xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="de.handwerkersystem.dlg.auftragverwalter.AbrechnungVerwalterScreenController"
+    alignment="TOP_CENTER" spacing="15.0"
+    prefWidth="800.0" prefHeight="600.0">
+
+    <padding>
+        <Insets top="20.0" right="20.0" bottom="20.0" left="20.0" />
+    </padding>
+
+    <children>
+
+        <Label text="Abrechnung von Kundenaufträgen">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+
+
+        <SplitPane orientation="HORIZONTAL" VBox.vgrow="ALWAYS">
+            <items>
+
+
+                <VBox spacing="5.0">
+                    <children>
+                        <Label text="Beendete, noch nicht abgerechnete Aufträge" />
+                        <TableView fx:id="tv_auftraege" prefWidth="350.0">
+                            <columns>
+                                <TableColumn fx:id="tc_nr" text="Nr" prefWidth="60.0" />
+                                <TableColumn fx:id="tc_kunde" text="Kunde" prefWidth="160.0" />
+                                <TableColumn fx:id="tc_datum" text="Datum" prefWidth="130.0" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </VBox>
+
+                <VBox spacing="5.0">
+                    <children>
+                        <Label text="Rechnungsvorschau" />
+                        <TextArea fx:id="ta_rechnung"
+                            editable="false"
+                            wrapText="false"
+                            prefRowCount="20" />
+                    </children>
+                </VBox>
+
+            </items>
+        </SplitPane>
+
+        <HBox spacing="10.0" alignment="CENTER">
+            <children>
+                <Button fx:id="bt_zurueck"
+                    text="Zurück"
+                    onAction="#bt_zurueckClicked"
+                    prefWidth="170.0" />
+
+                <Button fx:id="bt_rechnungErstellen"
+                    text="Rechnung erstellen"
+                    onAction="#bt_rechnungErstellenClicked"
+                    prefWidth="170.0" />
+
+                <Button fx:id="bt_alsAbgerechnet"
+                    text="Auftrag als abgerechnet markieren"
+                    onAction="#bt_alsAbgerechnetClicked"
+                    prefWidth="230.0" />
+            </children>
+        </HBox>
+
+    </children>
+</VBox>

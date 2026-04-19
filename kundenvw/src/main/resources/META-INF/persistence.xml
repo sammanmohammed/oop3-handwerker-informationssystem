@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.2"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+
+	<persistence-unit name="HANDWERKER-INFOSYSTEM_HA2"
+		transaction-type="RESOURCE_LOCAL">
+
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+
+		<class>de.handwerkersystem.awk.kundenverwaltung.entity.internal.Kunde</class>
+		<class>de.handwerkersystem.awk.entity.internal.Ressource</class>
+
+
+		<exclude-unlisted-classes>false</exclude-unlisted-classes>
+
+		<properties>
+
+			<property name="jakarta.persistence.jdbc.url"
+				value="jdbc:oracle:thin:@oracle.zemit.wi.hs-osnabrueck.de:1521:ORCLCDB" />
+
+			<property name="jakarta.persistence.jdbc.user"
+				value="STUD19" />
+
+			<property name="jakarta.persistence.jdbc.password"
+				value="Weltmeister2014" />
+
+			<property name="jakarta.persistence.jdbc.driver"
+				value="oracle.jdbc.OracleDriver" />
+
+			<property name="eclipselink.target-database"
+				value="org.eclipse.persistence.platform.database.OraclePlatform" />
+
+			<property name="eclipselink.weaving"
+				value="static" />
+
+			<!-- Logging (optional, zum Debuggen) -->
+			<!--
+            <property name="eclipselink.logging.level" value="FINE"/>
+            <property name="eclipselink.logging.parameters" value="true"/>
+            -->
+
+            <!-- <property name="jakarta.persistence.schema-generation.database.action" value="create"/>
+
+		 <property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>  -->
+
+
+		</properties>
+
+	</persistence-unit>
+</persistence>
